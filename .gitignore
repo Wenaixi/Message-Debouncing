@@ -1,0 +1,40 @@
+# Python 缓存
+__pycache__/
+*.pyc
+*.pyo
+
+# 备份文件（主人 patch 留下的时间戳备份，不入库）
+*.bak.*
+*.bak
+
+# 编辑器临时文件
+*.swp
+.DS_Store
+Thumbs.db
+
+# 运行时数据
+*.log
+data/
+*.db
+.venv/
+
+# ===== 主人本地副本规则（2026-08-19 重写：从豁免改为严格忽略）=====
+# 主人哲学变更：以前豁免 config.toml / cookies / data 入库方便回溯；现在改为默认忽略。
+# 历史 commit 中的真值密钥暂保留（git filter-repo 标记为 Phase 2，待主人定夺），
+# 但未来增量不再入库；plugin-level CLAUDE.md 旧 SHA 引用仍有效。
+#
+# 默认忽略敏感文件（含真值密钥）
+config.toml
+config.toml.bak
+config.toml.bak.*
+config.toml.local
+config.local.toml
+cookies-*.json
+data/
+
+# 允许追踪的例外（按需取消注释；本仓库作为 MaiBot 插件 source of truth）：
+#!config.example.toml
+#!config.toml.example
+#!data/.gitkeep
+# OMC CLI 状态文件（不纳入仓库）
+.omc/

@@ -1,0 +1,13 @@
+[plugin]
+enabled = true
+config_version = "1.0.0"
+debounce_seconds = 2.0
+max_wait_seconds = 8.0
+merge_separator = "\n"
+enable_private = true
+enable_group = true
+merge_same_user_only = true
+ignore_commands = true
+command_prefixes = ["/", "!", "！"]
+ignore_empty_message = true
+log_detail = true
